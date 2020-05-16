@@ -29,8 +29,10 @@ cp -r consoles /etc/prometheus
 cp -r console_libraries /etc/prometheus
 cp prometheus.yml /etc/prometheus/prometheus.yml
 
-cd 
-rm -rf prometheus*
+# remove tar file
+cd ..
+rm -rf prometheus-${PROMETHEUS_VERSION}.linux-amd64.tar.gz
+
 chown -R prometheus:prometheus /etc/prometheus/consoles
 chown -R prometheus:prometheus /etc/prometheus/console_libraries
 
